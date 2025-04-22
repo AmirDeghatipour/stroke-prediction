@@ -1,0 +1,6 @@
+numpy
+pandas
+seaborn
+jupyter
+scikit-learn
+-e .
