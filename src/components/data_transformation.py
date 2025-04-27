@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder,OrdinalEncoder, StandardScaler
 from src.exception import CustomException
 from src.logger import logging
-from src.utlis import save_object
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
