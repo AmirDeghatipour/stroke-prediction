@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Stroke Prediction Form</h2>
+        <form action="{{ url_for('predict_datapoint')}}" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" step="any" class="form-control" id="bmi" name="bmi" required>
+            </div>
+            <div class="form-group">
+                <label for="avg_glucose_level">Average Glucose Level:</label>
+                <input type="number" step="any" class="form-control" id="avg_glucose_level" name="avg_glucose_level" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ever_married">Ever Married:</label>
+                <select class="form-control" id="ever_married" name="ever_married" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Residence_type">Residence Type:</label>
+                <select class="form-control" id="Residence_type" name="Residence_type" required>
+                    <option value="Urban">Urban</option>
+                    <option value="Rural">Rural</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="work_type">Work Type:</label>
+                <select class="form-control" id="work_type" name="work_type" required>
+                    <option value="Private">Private</option>
+                    <option value="Self-employed">Self-employed</option>
+                    <option value="Govt_job">Govt_job</option>
+                    <option value="children">Children</option>
+                    <option value="Never_worked">Never_worked</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="smoking_status">Smoking Status:</label>
+                <select class="form-control" id="smoking_status" name="smoking_status" required>
+                    <option value="never smoked">Never smoked</option>
+                    <option value="formerly smoked">Formerly smoked</option>
+                    <option value="smokes">Smokes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hypertension">Hyper Tension:</label>
+                <input type="number" class="form-control" id="hypertension" name="hypertension" required>
+            </div>
+            <div class="form-group">
+                <label for="heart_disease">Heart Disease:</label>
+                <input type="number" class="form-control" id="heart_disease" name="heart_disease" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <h2>
+            THE  prediction is {{results}}
+         </h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
