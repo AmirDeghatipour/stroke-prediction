@@ -8,4 +8,5 @@ xgboost
 catboost
 pypickle
 flask
--e .
+streamlit
+# -e .
